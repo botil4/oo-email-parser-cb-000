@@ -11,7 +11,7 @@ class EmailParser
 
   def parse
     parse = @emails_string.split(/[, ]/)
-    parse.uniq.reject("")
+    parse.uniq.reject{|i| ""}
   end
 
 end
