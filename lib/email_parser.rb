@@ -10,8 +10,8 @@ class EmailParser
   end
 
   def parse
-    parse = @emails_string.split(/[, ]/)
-    parse.uniq.reject{|i| ""}
+    parse = @emails_string.split(/[, ]\s?/)
+    parse.uniq
   end
 
 end
