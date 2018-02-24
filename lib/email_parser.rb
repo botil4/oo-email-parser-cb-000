@@ -5,15 +5,13 @@
 
 class EmailParser
 
-  attr_accessor :emails_parse
-
   def initialize(emails)
     @emails_string = emails
   end
 
   def parse
     parse = @emails_string.split(/[, ]/)
-    parse.uniq
+    parse.uniq.reject("")
   end
 
 end
